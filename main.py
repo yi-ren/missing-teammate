@@ -1,5 +1,5 @@
 # Copyright 2012 Digital Inspiration
-# http://www.labnol.org/
+# https://www.labnol.org/
 
 import os
 from google.appengine.ext import webapp
