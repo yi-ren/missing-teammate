@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Missing Teammate</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="js/jquery.qtip.custom/jquery.qtip.min.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body id="home" role="document">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Missing Teammate</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li class="active"><a href="help.html">Help</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>How to Play:  </h1>
+        <p>Clues are hidden in the conversations and pictures. Mouse over different regions to find clues.</p>
+        <p>Clickable objects will have <b>BLACK</b> text bubbles when you mouse over it, like this one:</p>
+        <p><a id="clickable-example-a"><button class="btn btn-primary btn-md" role="button" id="clickable-example">Mouse Over Me</button></a></p>
+        <p>Some unclickable objects also give you information for you to read, they have <b>WHITE</b> text bubbles when you mouse over them, like this one:</p>
+        <p><a id="unclickable-example-a"><button class="btn btn-primary btn-md" role="button" id="unclickable-example">Mouse Over Me</button></a></p>
+        <p>There are also arrows in some scenes, click on them to explore a different area of the scene. Like these:</p>
+        <p><img src="img/control/left.png"> <img src="img/control/right.png"></p>
+        <p>Sometimes you will encounter a blue button like this, click on it to switch to another character's story:</p>
+        <p><button class="btn btn-info btn-lg" role="button">Switch to Someone's Story</button></p>
+        <p>When you see a big red button like this, congrats, you have solved the case! Click to see the conclusion.</p>
+        <p><button class="btn btn-danger btn-lg" role="button">Case Solved!</button></p>
+        <p>Enough of that, start playing!</p>
+        <a href="game.html"><button class="btn btn-primary btn-lg" role="button">Play <span class="glyphicon glyphicon-chevron-right"></span></button></a>
+
+      </div>
+
+    </div> <!-- /container -->
+<footer class="bs-docs-footer" role="contentinfo">
+  <div class="container">
+    <p>Designed and built by Team Mynee.</p>
+  </div>
+</footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/qtip2/2.2.0/jquery.qtip.min.js"></script> 
+
+    <script>
+	$(document).ready(function(){
+		
+    $('#clickable-example-a').qtip({
+		
+		content: {
+			text: "This is a clickable object! Click me!"
+		},
+		
+		style: {
+		classes: 'qtip-jtools'
+		},
+		
+		show: {
+        ready: true,
+		delay:4000
+		},
+		
+		position: {
+		my: 'center left',  // Position my top left...
+        at: 'center right', // at the bottom right of...
+		}
+	});
+	
+	$('#clickable-example').qtip({
+		
+		content: {
+			text: "This is a clickable object! Click me!"
+		},
+		
+		position: {
+			target: 'mouse', // Track the mouse as the positioning target
+				 adjust: { x: 10, y: 10 } // Offset it slightly from under the mouse
+		},
+		
+		style: {
+		classes: 'qtip-jtools'
+		},
+		
+		 show: {
+             solo: true
+         }
+		 
+		 	});
+			
+			
+		$('#clickable-example').click(function() {
+  alert( "You clicked me! Things will happen if you were playing the game." );
+});
+	
+	$('#unclickable-example-a').qtip({
+		content: {
+			text: "This is unclickable, you can click me all you want but you'll get nothing more!"
+		},
+		
+		style: {
+		classes: 'qtip-bootstrap'
+		},
+		
+		show: {
+        ready: true,
+		delay:8000
+		},
+		
+		position: {
+		my: 'center left',  // Position my top left...
+        at: 'center right', // at the bottom right of...
+		}
+		
+	});
+	
+	$('#unclickable-example').qtip({
+		content: {
+			text: "This is unclickable, you can click me all you want but you'll get nothing more!"
+		},
+		position: {
+			target: 'mouse', // Track the mouse as the positioning target
+				 adjust: { x: 10, y: 10 } // Offset it slightly from under the mouse
+		},
+		style: {
+		classes: 'qtip-bootstrap'
+		},
+		
+		show: {
+             solo: true
+         }
+		 	});
+	
+	});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+<title>Missing Teammate</title>
+
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap theme -->
+<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="js/jquery.qtip.custom/jquery.qtip.min.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="css/custom.css" rel="stylesheet">
+
+
+<!-- Just for debugging purposes. Don't actually copy this line! -->
+<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="intro" role="document">
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="game.html">Missing Teammate</a> </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="game.html">Game</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <!--/.nav-collapse --> 
+  </div>
+</div>
+<div class="container" id="game-container" role="main"> 
+  
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="carousel-inner">
+      <div class="item active"> 
+      <img src="img/intro/panshot/3-IrisandJialiang.jpg" usemap="#Map">
+      <map name="Map">
+        <area shape="poly" id="iris-area" coords="188,173,150,216,126,252,118,286,97,341,33,340,14,355,33,369,64,370,81,413,111,429,114,455,136,502,153,514,341,516,316,460,348,384,338,371,343,338,395,330,338,315,307,347,254,273,240,274,241,204,224,183" href="profile-iris.html">
+        <area shape="poly" id="jialiang-area" coords="591,521,567,479,562,419,541,391,491,394,501,331,501,290,529,295,547,270,591,266,578,217,617,181,654,187,671,212,661,254,683,272,738,270,751,332,810,305,791,353,761,430,753,471,782,557,733,558" href="profile-jialiang.html">
+      </map>
+      </div>
+      <a class="left carousel-control" href="intro-Isa-and-Andrew.html"> <span class="glyphicon glyphicon-chevron-left"></span> </a> <a class="right carousel-control" href="intro-empty-chair.html"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
+    </div>
+    <p dir="ltr">Iris: Maybe he forgot and is watching the game?</p>
+    <p dir="ltr">Jialiang: I bet he&rsquo;s making a nice big apology lunch for us all to eat!</p>
+  </div>
+</div>
+<!-- /container -->
+<footer class="bs-docs-footer" role="contentinfo">
+  <div class="container">
+    <p>Designed and built by Team Mynee.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<!-- Include either the minifed or production version, NOT both!! --> 
+<script type="text/javascript" src="http://cdn.jsdelivr.net/qtip2/2.2.0/jquery.qtip.min.js"></script> 
+
+<!-- Optional: imagesLoaded script to better support images inside your tooltips --> 
+<script type="text/javascript" src="js/jquery.qtip.custom/imagesloaded.pkg.min.js"></script> 
+<script>
+$(document).ready(function(){
+	
+	$('.left.carousel-control').qtip({
+		content: {
+			text: "Click to see others' reactions"
+		},
+		position: {
+			target: 'mouse', // Track the mouse as the positioning target
+				 adjust: { x: 10, y: 10 } // Offset it slightly from under the mouse
+		},
+		style: {
+		classes: 'qtip-jtools'
+		}
+	});
+	
+	$('.right.carousel-control').qtip({
+		content: {
+			text: "Click to see others' reactions"
+		},
+		position: {
+			target: 'mouse', // Track the mouse as the positioning target
+				 adjust: { x: 10, y: 10 } // Offset it slightly from under the mouse
+		},
+		style: {
+		classes: 'qtip-jtools'
+		}
+	});
+$('#iris-area').qtip({
+    content: {
+		text: "Click to look at Iris's profile"
+    },
+    position: {
+        target: 'mouse', // Track the mouse as the positioning target
+             adjust: { x: 10, y: 10 } // Offset it slightly from under the mouse
+    },
+	style: {
+    classes: 'qtip-jtools'
+    }
+});
+$('#jialiang-area').qtip({
+    content: {
+		text: "Click to look at Jialiang's profile"
+    },
+    position: {
+        target: 'mouse', // Track the mouse as the positioning target
+             adjust: { x: 10, y: 10 } // Offset it slightly from under the mouse
+    },
+	style: {
+    classes: 'qtip-jtools'
+    }
+});
+});
+</script>
+</body>
+</html>
